@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> 자바스크립트 예제 </h1>
+
+</body>
+	<script type="text/javascript">
+	
+		/*
+		var name = "global";
+		
+		function checkscope(){
+			var name = "local"; //두번째 돌 때 로컬로 바껴버림 
+			console.log(name); 
+		}
+		checkscope();
+		console.log(name); 
+		*/
+		
+		
+		//var은 새로 만들라는 뜻 
+		
+		//전역 어디서든 쓸 수 있음 
+		var name = "global";
+		var name2 = "로컬";
+			
+		function checkscope(){
+			name = "local";
+			name2 = "로컬";
+		}
+		checkscope();
+		console.log(name);
+		console.log(name2);
+		
+	
+	</script>
+</html>

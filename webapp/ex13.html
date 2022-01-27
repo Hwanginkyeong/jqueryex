@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	console.log("======배열======");
+	//var array = [273, 32, 103, 57, 52];
+	var array = [];
+	
+	array[0] = 273;
+	array[1] = 32; 
+	array[2] = 103; 
+	array[0] = 57; 
+	array[3] = 53; 
+	
+	/*
+	console.log(array[0]);
+	console.log(array[1]);
+	console.log(array[2]);
+	console.log(array[3]);
+	console.log(array[4]);
+	console.log(array[5]);
+	*/
+	
+	for(var i=0; i<array.length; i++){
+		console.log(array[i]); 
+	}
+	
+	/////////////////////////////////////////////
+	console.log("================");
+	var array2 = [];
+	array2[0] = 1;
+	array2[1] = 2.5;
+	array2[2] = 'A';
+	array2[3] = "안녕 hello!!";
+	
+	/*
+	console.log(array2[0]);
+	console.log(array2[1]);
+	console.log(array2[2]);
+	console.log(array2[3]);
+	*/
+	
+	for(var i=0; i<array2.length; i++){
+		console.log(array2[i]);
+	}
+	
+	/////////////////////////////////////////////
+	console.log("================");
+	
+	var array4 = [273, "Hello", true, sum(5,2),[111,222], function(){return 3+4}];
+	console.log(array); //문자열만 보여지는게 아니라 들어간 값도 보여진다
+	
+	//console.log(array);
+	console.log(array4[0]);
+	console.log(array4[1]);
+	console.log(array4[2]);
+	console.log(array4[3]);
+	console.log(array4[4][0]); //array4 5번째방[4]에서 1번째방[0]을 나타내는 방법 
+	console.log(array4[5]()); //실행하려면 () 붙이기 
+	
+	
+	
+	
+	
+	function sum(a, b){
+		return a+b;
+	}
+	
+	
+
+</script>
+
+</body>
+</html>
