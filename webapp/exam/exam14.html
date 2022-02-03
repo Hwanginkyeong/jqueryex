@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+
+</body>
+
+	<script type="text/javascript">
+		
+		$("li").on("click", function(){
+			//console.log("클릭"); //클릭 이벤트 먼저 확인 
+			var tag = $(this);
+			tag.text("황인경");
+			
+			//$(this).text("황인경"); //이렇게 한줄로도 가능 
+			//$(this).html("<strong>황인경</strong>"); //text html 차이 확인 
+			
+			
+			//내 접근 방식 
+			//$("#second").empty();
+			//$("#second").prepend("황인경");
+			
+			
+		});
+	
+	
+		/*
+		$("li").on("click", function(){
+			var tag = $(this); //클릭한 부분 정보 가져오기 this 대상자 잘 확인 
+			var tagId = tag.attr("id"); //id 대신 class값 꺼내 쓸 수 있음 
+			console.log(tagId); //네 번째 undefined 된 거 확인 
+			
+		});
+		*/
+		
+		
+		
+		
+	
+	
+	
+	
+	</script>
+
+
+
+</html>

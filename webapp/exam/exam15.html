@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+	<button id="btn" type="button"> li 태그 추가버튼 </button>
+</body>
+
+	<script type="text/javascript">
+		
+		$("ul").on("click","li", function(){   //바뀐 this를 잘 살피기 
+			var $that = $(this);
+			$that.text(); //읽어오기 
+			console.log($that.text());
+			$that.text("황인경"); //바꾸기
+			
+			
+		}); //아래 새로 생긴 애들은 클릭이 안먹음 -> 규칙 
+		
+
+		$("#btn").on("click", function(){
+			$("ul").append("<li> 다섯번째 아이템입니다. </li>"); 
+			$("ul").append("<li> 여섯번째 아이템입니다. </li>"); 
+			$("ul").append("<li> 일곱번째 아이템입니다. </li>"); 
+		}); 
+		
+		
+	
+		
+		
+	</script>
+
+
+</html>
