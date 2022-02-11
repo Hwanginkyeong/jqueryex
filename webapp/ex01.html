@@ -6,21 +6,57 @@
 </head>
 <body>
 	<h1>자바스트립 예제</h1>
-	
+
 	<script type="text/javascript">
+	console.log("*******타입 확인*******");
 	console.log(typeof 1);   //println 이랑 비슷한 용도 
-	console.log(typeof 1.5); //개발자모드 콘솔에서 number 확인
-	
-	
-	console.log("동해물과" + "name" + "백두산이");
-	//예제 쳐보기 
+	console.log(typeof 1.5); //개발자모드 콘솔에서 number 확인 //숫자는 다 number 
+	console.log(typeof '한'); //string java처럼 character가 아님 
+	console.log(typeof "안녕하세요"); //따움표 혼용해서 쓰는 것은 좋지 않음 하지만 둘 다 가능 
+	console.log(typeof (6>5));
 	</script>
 	
+	
+	
+	<script type="text/javascript">
+	console.log("*******타입 확인*******");
+	console.log(13+5);     //18
+	console.log(13-5);     //8
+	console.log(13*5);     //65
+	console.log(13/5);     //2.6  //헷갈리지 않기 나머지 그대로 나옴 //이런식으로 실험하며 확인하기 
+	console.log(13%5);     //3
+	
+	console.log(13+5.2)    //18.2
+	
+	console.log(5+3*2)    //11
+	console.log((5+3)*2)  //16
+	</script>
+
+
+	<script type="text/javascript">
+	console.log("*******문자열확인*******");
+	console.log("동해물과 백두산이");
+	console.log('동해물과 백두산이');
+
+	console.log("동해물과 \"백두산\"이");	
+	console.log('동해물과 \'백두산\'이');
+	
+	console.log('동해물과 "백두산"이');	
+	console.log("동해물과 '백두산'이");	
+	
+	console.log('동해물과 \n백두산이');	//줄바꿈 
+	console.log('동해물과 \t백두산이'); //tab 
+	
+	console.log("동해물과" + 1234 + "백두산이"); 
+	console.log("동해물과" + name + "백두산이"); //값이 없는 변수로 인지를 하고 안뿌린 거로 예상 
+	console.log("동해물과" + "name" + "백두산이"); 
+	</script>
+
+
 	<script type="text/javascript">
 	console.log("*******불린형*******");
-	console.log( 52>273 );
-	
-	
+	console.log(52>273);
+	console.log(52<273);
 	</script>
 
 </body>

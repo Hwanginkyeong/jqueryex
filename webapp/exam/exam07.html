@@ -13,10 +13,13 @@
 </body>
 
 	<script type="text/javascript">
-		$("#p1").html("<strong>가나다라마바사");  //html 과 text 비교해보기 실험해보기 
-	
-		var text = $("#p2").html(); //text랑 비교해서 실험하기 
-		console.log(text);
+		$("#p1").html("<strong>가나다라마바사</strong>");  //객체조작 .html 과 .text 비교해보기 실험해보기 
+														//text는 태그가 기능하지않고 그냥 문자로 인식함 -> 태그가 되게 하려면 html 
+		
+		var text = $("#p2").html(); //$("#p2").html(); 값 가져오는 거. text라는 변수에 담기 
+		console.log(text);			//콘솔값을 보면 .text는 꺼낼 때 텍스트만 가져오고 .html은 <br>태그를 문자로 인식하여 다 꺼냄 
+									//.html은 html로 읽어와 라고 생각하면 쉬움 태그도 html이니까 전부 읽어오겠지 
+									//.text는 text만 읽어와 라고 생각 
 	
 	</script>
 	
