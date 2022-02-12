@@ -14,22 +14,24 @@
 		<li><strong>네번째 아이템입니다.</strong></li>
 		
 	</ul>
-	<button id="btn" type="button"> li 태그 추가버튼 </button>
+	<button id="btn" type="button"> li 태그 추가버튼 </button>   <!-- input 대신 button 추천 -->
+	<!-- 게시판 글쓰면 아래 추가 되는 거에 대한 응용 -->
 </body>
 
 	<script type="text/javascript">
 		
 		$("ul").on("click","li", function(){   //바뀐 this를 잘 살피기 
-			var $that = $(this);
+			var $that = $(this); //변수 이름을 $this(javascript 변수 이름 $ 붙일 수 있음) 로 한 거. 헷갈릴 필요없음 
 			$that.text(); //읽어오기 
-			console.log($that.text());
-			$that.text("황인경"); //바꾸기
+			console.log($that.text()); //변수 $that 이라는 곳에 담긴 텍스트 값($(this))을 출력 
+			$that.text("황인경"); //그 텍스트 값을 황인경으로 바꾸기
 			
 			
 		}); //아래 새로 생긴 애들은 클릭이 안먹음 -> 규칙 
 		
 
-		$("#btn").on("click", function(){
+		$("#btn").on("click", function(){ //id가 btn값을 가진 button을 클릭하면 발생하는 이벤트라는 의미 
+			//console.log("클릭");
 			$("ul").append("<li> 다섯번째 아이템입니다. </li>"); 
 			$("ul").append("<li> 여섯번째 아이템입니다. </li>"); 
 			$("ul").append("<li> 일곱번째 아이템입니다. </li>"); 
