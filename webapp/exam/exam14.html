@@ -17,14 +17,17 @@
 
 </body>
 
-	<script type="text/javascript">
+	<script type="text/javascript"> //2022-01-27-(1)강의 3:13:00~ 
 		
-		$("li").on("click", function(){
-			//console.log("클릭"); //클릭 이벤트 먼저 확인 
-			var tag = $(this);
-			tag.text("황인경");
+		$("li").on("click", function(){ //이렇게 클릭 이벤트를 먼저 잡아야 함 ** 외우기 ** 
+			//console.log("클릭"); //클릭 이벤트 작동되는 지 콘솔에서 클릭이 출력되는 지 먼저 확인 
+			var tag = $(this);  //$(this) 의 의미: 사용자가 클릭한 애를 내놔. 이것 을 tag에 넣어줌 
+			var tagId= tag.attr("id"); //tag 안에는 id값이 들어가 있음. id의 속성값( ex) first )을 꺼내쓸 때 사용 
+			//var tagId= tag.text(); //클릭 시 '첫번째 아이템입니다.'라는 텍스트가 출력되도록 그 값을 tagId에 담음 
+			tag.text("황인경"); //클릭 시 text를 황인경 이라는 값으로 바꿔줌  
+			console.log(tagId); //콘솔에 id값 출력 
 			
-			//$(this).text("황인경"); //이렇게 한줄로도 가능 
+			//$(this).text("황인경"); //변수(tag) 굳이 안만들고 이렇게 한줄로도 가능 
 			//$(this).html("<strong>황인경</strong>"); //text html 차이 확인 
 			
 			
